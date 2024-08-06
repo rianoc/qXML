@@ -8,5 +8,4 @@ def read(file):
         if content[:3] == codecs.BOM_UTF8:
             content = content[3:]
         data_dict = xmltodict.parse(content.decode("utf-8"))
-    xml_file.close()
     return json.dumps(data_dict).encode()
