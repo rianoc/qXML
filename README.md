@@ -1,12 +1,12 @@
-# qxml
+# qXML
 
 Read XML files in q
 
 ## Requirements
 
-* kdb+ ≥3.5 64-bit
-  * [embedPy](https://code.kx.com/v2/ml/embedpy/)
-* Python ≥3.5
+* kdb+ ≥4.0
+  * [PyKX](https://code.kx.com/pykx)
+* Python ≥3.8
   * [xmltodict](https://pypi.org/project/xmltodict/)
 
 ## Run
@@ -26,7 +26,9 @@ q)\l qxml.q
 ## Functions
 
 ### .qxml.read
+
 Using the following [example](https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ms762271(v=vs.85)):
+
 ```q
 q)xmldata:.qxml.read[`:books.xml];
 q).Q.id xmldata[`catalog;`book]

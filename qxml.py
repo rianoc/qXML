@@ -9,4 +9,4 @@ def read(file):
             content = content[3:]
         data_dict = xmltodict.parse(content.decode("utf-8"))
     xml_file.close()
-    return json.dumps(data_dict)
+    return json.dumps(data_dict).encode()
